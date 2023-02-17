@@ -1,0 +1,251 @@
+html{
+    font-size: 22px
+}
+body{
+    background-color: #333;
+    color: whitesmoke;
+    /*text-transform: uppercase; [Turns the text of the web-page to uppercase]!*/
+
+    text-align: justify; /*Justify is used to make lines of text of the same, we can use left, right, centre and justify.*/
+
+    /*font-size: 1.25em  [This is a relative unit and means the the font size would become 1.25 of the current size.] */
+
+    /*font-weight: 400; This basically decides how bold is the font, most fonts support upto 900 value.*/
+
+    /* font-family:'Courier New', Courier, monospace; */
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+
+a {
+    color: aliceblue
+}
+a:visited {
+    color:lightgrey
+}
+a:hover, a:active {
+    color: #eee
+}
+table, tr, th, td, caption {
+    border: 1px solid #eee;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem
+}
+/* .title{
+    color: red
+} */
+/* #schedule{
+    color: green
+} */
+/*NTH CHILD OF THE PARENTS WILL HAVE THE PROPERTIES:
+/* li:nth-child(2){
+    color:steelblue
+} */
+/* #google-link:link{
+    color: blue;
+}
+#google-link:visited{
+    color: red;
+} */
+
+
+/*THE FOUR OF THE BASIC ADVANCED SELECTORS ARE:
+
+/* h2 + a {
+    color:red  This is an advanced selector and means every anchor tag that follows an h2 will have the listed properties.
+} */
+
+/* textarea ~ button{
+    color:purple; This means that every button that is follows a text area of the same parent will have the listed properties.
+} */
+
+/* ul > li {
+     color:aqua 
+}/*This is the CHILD SELECTOR, this means that every child of the parent will have the listed properties. */
+
+/* ul li {
+    color: green; [This is the DESCENDENT SELECTOR, the elemnts that are the descendents of the ul element, that means child or child of the child(like in case of the nested ol list) will have the listed properties.]
+} */
+
+
+/* ATTRIBUTE SELECTOR
+/* h2[attr=value] {
+    color: green This is an example of attribute selector. This allows to select certain elements based on their attributes.
+} */
+
+/* .subtitle{
+    color:rgb(26, 180, 121)
+}
+
+img[src*="../img/"] {
+    border: 10px solid black;
+}
+
+h2[class~=article-subtitle]{
+    background: green;
+} */
+
+/* h2[class|=article-subtitle]{
+    background: green This is really powerful selector. Useful in creating libraries. Not used commonly.
+} */
+
+/* 
+subtitle-20935
+subtitle-65352
+*/
+
+/* PROPERTIES:
+    Selectors are used to identify an element on the web page whereas the properties defined are the actual changes and styling that is visible to the viewer.
+    They follow a general syntax of;
+    selector{
+        property: value;
+    }
+    for example, we can take Selector{
+                                    color: red
+                                            }
+        This, the color is the property that is changing of the element while red is the corresponding value.
+        The curly braces constitute a CSS block. A CSS block can have any number of properties.
+
+*/
+
+/* 
+NOW WE WILL START TO ACTUALLY STYLE MY WEB PAGE IN THE FOLLOWING SECTION
+ */
+
+
+.title{
+    color: rgb(232, 107, 58);
+    /* font-weight:800; */
+    font-family: 'Mukta', sans-serif; /*sans-serif basicaly the backup font which will be used in case the computer is unable to use the first font 'Mukta' */
+}
+.subtitle{
+    color:rgb(39, 218, 107);
+}
+
+/* GRADIENTS: Gradients of colours can be linear or radial.
+
+    1. FOR LINEAR GRADIENTS:
+    
+    Syntax: [background: linear-gradient(to direction, color1, color2, ...)]
+    There are four basic directions on a web page, top; bottom; up and right.
+    We can combine two directions, like top right etc. and can be used for gradients in a diagonal direction.
+
+    For using angles: Syntax: [background: lineara-gradient(xdeg, color1, color2, ...] 
+
+
+    2. FOR RADIAL GRADIENTS: 
+    
+    Sybtax: [background: radial-gradient(shape, color1 x%, color2 y%, color3 z%)]
+    The percentages must be in an ascending order.
+    The default shape is an ellipse, we can change it to circle as well.
+
+*/
+
+#google-link{
+    text-decoration: none;  /* This removes the default underline of the link */
+}
+
+.italics{
+     font-style: italic; /* The values can be set to italic, oblique(which is a little more italic) and normal(which is basically the normal state of the font) */
+
+}
+
+/*
+FONT FAMILIES: These are a collection of fonts that have similar features.
+    There are mainly three families that we can us :
+        1. SERIF : Mostly used in academic papers, essay etc. on the things are are to printed physically but is not easy to read on computer. (Times New Roman, Georgia)
+
+        2. SANS-SERIF : Most widely used and prefered by developers for websites. (Aerial, Calibri)
+
+        3. MONOSPACE : All characters have the same width and take up the same space. (Courier New)
+
+We can use fonts from the internet that are not included on our computer.
+SOURCE: Google Fonts 
+*/
+
+/*
+CSS Block Model is used for Website Layout and basically means that every single content is surrounded by an invisible box around it.
+Content is followed by Padding, followed by Border (This can be styled using the CSS Property BORDER) and finally by Margin.
+Padding is used for internal space while the margin is used for external space.
+
+*/
+
+#MMLP2{
+    height: 300px;
+    width: 27%; /*This is a relative unit and is prefered because it is viewable on multiple devices.*/
+    float: right; /*This makes the image, well 'float' towards the right of the web-page. This is really useful for creating layouts for the web pages.*/
+
+    border: 3px dashed steelblue;
+    /*[border: size style color;] Style of the border can be solid, dashed, double or dotted.*/
+
+
+    padding: 20px; /*This means there will be 20 pixels of space between the image and the border. We can use padding-left, right, bottom and top as well.
+    A really useful shorthand is to write:
+    [padding: top right bottom left] and specify value of each side of the padding.*/
+
+
+    margin: 20px; /*This adds margin to all the sides of the images, thus adds space between different elements.
+    The shorthand for margin is:
+    [margin top&bottom left&right;]*/
+}
+
+ .site-table{
+    /* display: none [This basicaly removes the table form the web-page and it doesn't even take up the space anymore and is used really often.] */
+
+        display: inline-block;
+} 
+
+/*FLEXBOX:
+Feature in CSS that enables us to create and arrange elements really easily and stands for 'Flexible Box' and is useful in creating responsive websites.
+
+It consists of two parts: The container(Parent Element) and the items(Child Elements).
+*/
+
+.container{
+    background-color: rgb(250, 250, 250);
+    margin: 10px;
+    height: 300px;
+
+    display: flex;
+    /* flex-direction: column-reverse; This decides the direction of the flex fox, row is the default and reverse can we used to reverse the order of the items.*/
+
+    flex-wrap: wrap; /*This makes the elements wrap around on the web page.*/
+    /* justify-content: space-around; [Evenly spaces the elements such that spacing is uniform.] */
+    /* align-items: center; Aligns the items at the centre vertically. flex-start, flex-end and centre can be used as the value for this.*/
+    align-items: center; /*This is used for the vertical alignment of the elements.*/
+    justify-content: center; /*This is used for the horizontal alignment of the elements.*/
+}
+
+.container-item{
+    background: rgb(36, 130, 39);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+
+    width: 70px;
+    line-height: 50px;
+    margin:10px;
+}
+
+.grid-container {
+	background-color: rgb(250,250,250);
+	margin: 10px;
+	height: 500px;
+
+	display: grid;
+	grid-template-columns: auto auto auto; /*The use of auto makes the grid consistent across alll screen sizes*/
+	grid-template-rows: auto auto;
+    justify-content: space-evenly;
+}
+
+.grid-item {
+  color: black;
+  font-size: 25px;
+  text-align: center;
+
+  width: 70px;
+  line-height: 40px;
+  margin: 10px;
+}
